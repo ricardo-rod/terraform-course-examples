@@ -1,25 +1,33 @@
 # First install terraform for Lnux and VMware, gcc, aws, azure
 
+terraform -install-autocomplete
 
 ## download examples
-git clone https://github.com/kevholditch/terraform-course-examples
+https://github.com/kevholditch/terraform-course-examples
+
 git clone git@github.com:ricardo-rod/terraform-course-examples.git
 
 # export the keys or apis ans users to use with vmware
 
-    - creae a new user on amazon or gcc or provider your preference
+    - create a new user on amazon or gcc or provider your preference
     - create a new user on AWS IAM programmatic user, and add attache setting
     and full access to aws.
     - copy everything, download the cvs
+
+
+$ export AWS_ACCESS_KEY_ID="anaccesskey"
+$ export AWS_SECRET_ACCESS_KEY="asecretkey"
+$ export AWS_DEFAULT_REGION="us-east-2"
+
 
 export AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 export AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 vim ~/.bashrc
-
 printenv | grep AWS
 
 # run as user
+
 terraform init
 
 terraform apply
