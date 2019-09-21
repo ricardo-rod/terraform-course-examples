@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "my_bucket" {
 resource "aws_iam_policy" "my_bucket_policy" {
   name = "my-bucket-policy"
 
-  policy = <<POLICY
+  policy = <<EOF
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -25,5 +25,5 @@ resource "aws_iam_policy" "my_bucket_policy" {
     }
   ]
 }
-POLICY
+EOF
 }
